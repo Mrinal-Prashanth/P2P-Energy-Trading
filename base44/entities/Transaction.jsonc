@@ -1,0 +1,74 @@
+{
+  "name": "Transaction",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "title": "Type",
+      "enum": [
+        "topup",
+        "withdrawal",
+        "trade_purchase",
+        "trade_sale"
+      ]
+    },
+    "amount": {
+      "type": "number",
+      "title": "Amount"
+    },
+    "direction": {
+      "type": "string",
+      "title": "Direction",
+      "enum": [
+        "credit",
+        "debit"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "title": "Description"
+    },
+    "counterparty_name": {
+      "type": "string",
+      "title": "Counterparty Name"
+    },
+    "buyer_name": {
+      "type": "string",
+      "title": "Buyer Name"
+    },
+    "listing_id": {
+      "type": "string",
+      "title": "Listing ID"
+    },
+    "kwh": {
+      "type": "number",
+      "title": "kWh"
+    },
+    "approval_status": {
+      "type": "string",
+      "title": "Approval Status",
+      "enum": [
+        "waiting",
+        "approved",
+        "rejected"
+      ],
+      "default": "waiting"
+    },
+    "transfer_status": {
+      "type": "string",
+      "title": "Transfer Status",
+      "enum": [
+        "yet_to_transmit",
+        "half_transmitted",
+        "full_transmitted",
+        "aborted"
+      ],
+      "default": "yet_to_transmit"
+    }
+  },
+  "required": [
+    "type",
+    "amount",
+    "direction"
+  ]
+}

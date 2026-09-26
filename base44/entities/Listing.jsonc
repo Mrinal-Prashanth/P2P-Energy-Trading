@@ -1,0 +1,61 @@
+{
+  "name": "Listing",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "Title"
+    },
+    "energy_type": {
+      "type": "string",
+      "title": "Energy Type",
+      "enum": [
+        "Solar",
+        "Wind",
+        "Hydro",
+        "Battery Storage",
+        "Biogas"
+      ]
+    },
+    "amount_kwh": {
+      "type": "number",
+      "title": "Amount (kWh)"
+    },
+    "rate_per_kwh": {
+      "type": "number",
+      "title": "Rate per kWh"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "open",
+        "sold",
+        "cancelled"
+      ],
+      "default": "open"
+    },
+    "seller_name": {
+      "type": "string",
+      "title": "Seller Name"
+    },
+    "buyer_name": {
+      "type": "string",
+      "title": "Buyer Name"
+    },
+    "available_from": {
+      "type": "string",
+      "title": "Available From"
+    },
+    "available_to": {
+      "type": "string",
+      "title": "Available To"
+    }
+  },
+  "required": [
+    "title",
+    "energy_type",
+    "amount_kwh",
+    "rate_per_kwh"
+  ]
+}

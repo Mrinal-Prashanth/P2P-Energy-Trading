@@ -1,0 +1,12 @@
+{
+  "name": "Wallet",
+  "type": "object",
+  "properties": {
+    "balance": {
+      "type": "number",
+      "title": "Balance",
+      "default": 0
+    }
+  },
+  "required": []
+}

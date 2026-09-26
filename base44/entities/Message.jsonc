@@ -1,0 +1,36 @@
+{
+  "name": "Message",
+  "type": "object",
+  "properties": {
+    "order_id": {
+      "type": "string",
+      "title": "Order ID"
+    },
+    "channel": {
+      "type": "string",
+      "title": "Channel",
+      "enum": [
+        "party",
+        "support"
+      ]
+    },
+    "role": {
+      "type": "string",
+      "title": "Role",
+      "enum": [
+        "user",
+        "assistant"
+      ]
+    },
+    "content": {
+      "type": "string",
+      "title": "Content"
+    }
+  },
+  "required": [
+    "order_id",
+    "channel",
+    "role",
+    "content"
+  ]
+}
